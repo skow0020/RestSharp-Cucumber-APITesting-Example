@@ -1,0 +1,68 @@
+﻿{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "soap:Envelope": {
+      "type": "object",
+      "properties": {
+        "@xmlns:soap": {
+          "type": "string"
+        },
+        "SOAP-ENV:Header": {
+          "type": "object",
+          "properties": {
+            "@xmlns:SOAP-ENV": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "@xmlns:SOAP-ENV"
+          ]
+        },
+        "soap:Body": {
+          "type": "object",
+          "properties": {
+            "ns2:createOrUpdateCorrespondenceResponse": {
+              "type": "object",
+              "properties": {
+                "@xmlns:ns2": {
+                  "type": "string"
+                },
+                "response": {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "type": "string"
+                    },
+                    "id": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "status",
+                    "id"
+                  ]
+                }
+              },
+              "required": [
+                "@xmlns:ns2",
+                "response"
+              ]
+            }
+          },
+          "required": [
+            "ns2:createOrUpdateCorrespondenceResponse"
+          ]
+        }
+      },
+      "required": [
+        "@xmlns:soap",
+        "SOAP-ENV:Header",
+        "soap:Body"
+      ]
+    }
+  },
+  "required": [
+    "soap:Envelope"
+  ]
+}
